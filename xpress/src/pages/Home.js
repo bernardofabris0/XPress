@@ -37,11 +37,10 @@ function Home() {
         <div className="video-grid">
           {videos.map((video, index) => (
             <div className="video-card" key={index}>
-              <video controls>
-                <source src={video.filePath} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <h3>{video.title}</h3>
+              <Link to={`/video/${video.title}`}>
+                <img src={video.thumbnailPath || video.filePath} alt="Video Thumbnail" className="video-thumbnail" />
+                <h3>{video.title}</h3>
+              </Link>
             </div>
           ))}
         </div>

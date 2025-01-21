@@ -5,7 +5,8 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Upload from './pages/Upload'; // Import the Upload component
+import Upload from './pages/Upload';
+import VideoPage from './pages/VideoPage'; // Import the VideoPage component
 import './App.css';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/upload" element={<Upload />} /> {/* Add the Upload route */}
+            <Route path="/upload" element={<Upload />} />
+            <Route path="/video/:videoId" element={<VideoPage />} /> {/* Add the VideoPage route */}
           </Routes>
         </div>
       </div>
